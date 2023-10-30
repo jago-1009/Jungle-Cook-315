@@ -1,0 +1,116 @@
+.nav-holder {
+    height:100px;
+    padding: 0 20px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+        color:#000;
+    }
+   
+    .nav-links {
+        ul {
+            text-align: left;
+            .login {
+                border-radius: 30px;
+                  background-color: $site-yellow;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width:158px;
+                    height:52px;
+                -webkit-box-shadow: 1px 5px 15px 3px rgba(0, 0, 0, 0.35);
+                    box-shadow: 1px 5px 15px 3px rgba(0, 0, 0, 0.35);
+                }
+            font-family: 'Caveat';
+            text-align: left;
+            li {
+                margin-right: 20px;
+                .border {
+                    width:54px;
+                    height:2px;
+                    background-color: #000;
+                }
+                transition: 0.3s;
+            }
+            li:hover {
+                transform:scale(1.1);
+                transition:0.3s;
+            }
+            list-style: none;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            a {
+                
+     
+                font-size: 25px;
+            }
+            
+        }
+        
+    }
+    .hamburger-menu {
+        display: none;
+    
+        cursor: pointer;
+        div {
+                transition: 0.3s;
+            width:35px;
+            height:3px;
+            background-color: brown;
+            margin:6px 0;
+        }
+    }
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        bottom:75%;
+        left:0;
+        height:calc(100vh - 50px);
+        width:100%;
+        li {
+            font-family: "Caveat";
+            -webkit-box-shadow: 1px 5px 15px 3px rgba(0, 0, 0, 0.35);
+                box-shadow: 1px 5px 15px 3px rgba(0, 0, 0, 0.35);
+            text-align: center;
+            width:100px;
+            list-style: none;
+            background-color: $site-yellow;
+            border-radius: 30px;
+            margin-bottom:10px;
+        }
+    }
+}
+.open {
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+.bar2 {
+    transition: 0.3s;
+transform: rotate(45deg)
+}
+.bar3 {
+        opacity: 0;
+}
+.bar1 {
+    transition: 0.3s;
+    transform: rotate(-45deg)
+    translate(-6px,6px);
+}
+}
+@media all and (max-width:768px) {
+.nav-links {
+    display:none;
+}
+
+.hamburger-menu {
+    display:block !important; 
+}
+}
